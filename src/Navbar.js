@@ -16,20 +16,20 @@ export const Navbar = () => {
   };
 
   return (
-    <Box position="sticky" sx={{ width: "100%", typography: "body1" }}>
+    <Box  sx={{  width: "100%", typography: "body1", position: 'center' }}>
       <TabContext value={value}>
         <Box
-          position="sticky"
+          
           sx={{ borderBottom: 1, borderColor: "divider", position: "sticky" }}
         >
           <TabList
-            position="sticky"
+            
             onChange={handleChange}
             aria-label="lab API tabs example"
           >
-            <Tab position="sticky" label="About Me" value="1" />
-            <Tab position="sticky" label="Projects" value="2" />
-            <Tab position="sticky" label="Contact " value="3" />
+            <Tab  label="About Me" value="1" />
+            <Tab  label="Projects" value="2" />
+            <Tab  label="Contact " value="3" />
           </TabList>
         </Box>
         <TabPanel value="1">
