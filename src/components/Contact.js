@@ -11,7 +11,7 @@ export const Contact = () => {
     message: "",
   });
   const [buttonPosition, setButtonPosition] = useState({ x: 0, y: 0 });
-console.log(buttonText)
+
 
 
   const handleMouseMove = (event) => {
@@ -29,7 +29,7 @@ console.log(buttonText)
     setFlag(true);
     // e.preventDefault();
     // console.log(newEmail);
-    console.log(form.current);
+    
 
     emailjs
       .sendForm(
@@ -40,7 +40,7 @@ console.log(buttonText)
       )
       .then(
         (result) => {
-          console.log(result.text);
+          
           if (result.text === "OK") {
             setFlag(false);
           }
@@ -158,7 +158,7 @@ console.log(buttonText)
 
         sx={{ color: "#fefefe", backgroundColor: "black", size: "large", ml: 2, mt: 2,  left: buttonPosition.x, top: buttonPosition.y  }}
         onClick={() => sendEmail()}
-        onMouseMove={(e) => console.log(e)}
+        // onMouseMove={(e) => console.log(e)}
       >
         send
       </Button>
