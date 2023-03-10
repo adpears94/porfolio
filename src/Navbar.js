@@ -12,6 +12,7 @@ import { alpha } from "@mui/material";
 import { Home } from "./components/Homepage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 export const Navbar = () => {
   const [value, setValue] = useState("1");
   const navigate = useNavigate();
