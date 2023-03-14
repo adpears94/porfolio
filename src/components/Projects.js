@@ -161,24 +161,26 @@ export const Projects = () => {
         sx={{
           display: "flex",
           // width: "99.5vw",
-          width: 1,
+          width: '100%',
           flexDirection: "row",
+          flexWrap: 'wrap',
           justifyContent: "space-between",
-          alignItems: "center",
+          // alignItems: "center",
         }}
       >
         <Box
           sx={{
-            width: .5,
-            display: "flex",
-            justifyContent: "center",
-            height: 1,
-            pt: 10,
+            width: "50%",
+            minWidth: 412,
+            // display: "flex",
+            // justifyContent: "center",
+            // height: 1,
+            // pt: 10,
           }}
         >
           <Carousel
-            sx={{ display: "flex" }}
-            width="100%"
+          // width="50%"
+            // sx={{ width: "20vw" }}            
             showThumbs={false}
             showArrows={true}
             showIndicators={false}
@@ -196,14 +198,15 @@ export const Projects = () => {
         </Box>
         <Box
           sx={{
-            width: 1,
-            // height: 500,
+            width: '50%',
+            minWidth: 412,
+            maxWidth: "100%",
             display: "flex",
             justifyContent: "center",
-            position: "relative",
-            alignItems: "flex-start",
+            // position: "relative",
+            alignItems: "start",
             // mb: description === "vigil" ? 0 : 14,
-            ml: 3,
+            // ml: 3,
           }}
         >
           {description === "vigil" ? vigilDescription : passDescription}

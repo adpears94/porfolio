@@ -36,7 +36,7 @@ export const Footer = () => {
         sx={{
           width: "15%",
           position: "sticky",
-          backgroundColor: alpha("#fefefe", 0.3),
+          backgroundColor: alpha("#fefefe", .8),
         }}
 
         //  value={value}
