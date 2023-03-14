@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         alignItems: 'center',
+        
         [theme.breakpoints.down('sm')]: {
           flexDirection: 'column',
           alignItems: 'center',
@@ -16,13 +17,13 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     // textAlign: "center",
-    width: '70%',
+    width: '60%',
     maxHeight: 500,
     color: theme.palette.text.secondary,
     "&:hover": {
-      transform: "scale(1.2)",
-      transition: "all 0.5s",
-      transform: "rotate(360deg)",
+      transform: "scale(1.1)",
+      transition: "all 0.7s ease-out",
+      // transform: "rotate(360deg)",
     },
   },
   avatar: {
@@ -44,8 +45,8 @@ export const About = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Box sx={{width: '100%'}}>
+    <div className={classes.root} >
+      <Box sx={{width: '99%'}}>
         <Box sx={{ display: "flex", flexDirection: "row", mb: 5, justifyContent: 'spaceBetween', width: '100%' }}>
           
            

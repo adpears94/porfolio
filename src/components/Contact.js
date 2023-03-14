@@ -52,7 +52,7 @@ export const Contact = () => {
   };
 
   return (
-    <Box sx={{ justifyContent: "column", width: "99.9vw", border: 1, ml: -4, }}>
+    <Box sx={{ justifyContent: "column", width: "100%", border: 1,}}>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Typography>Please contact me if you would like to ...</Typography>
       </Box>
@@ -79,10 +79,10 @@ export const Contact = () => {
               "& .MuiOutlinedInput-input": { color: "black" },
               "& .MuiFormLabel-root": { color: "black" },
               "& .MuiOutlinedInput-notchedOutline": { borderColor: "black" },
-              "& label.Mui-focused": { color: "white" },
+              "& label.Mui-focused": { color: "black" },
               "& .MuiOutlinedInput-root": {
                 "&.Mui-focused fieldset": {
-                  borderColor: "white",
+                  borderColor: "black",
                 },
               },
             }}
@@ -101,10 +101,10 @@ export const Contact = () => {
               "& .MuiOutlinedInput-input": { color: "black" },
               "& .MuiFormLabel-root": { color: "black" },
               "& .MuiOutlinedInput-notchedOutline": { borderColor: "black" },
-              "& label.Mui-focused": { color: "white" },
+              "& label.Mui-focused": { color: "black" },
               "& .MuiOutlinedInput-root": {
                 "&.Mui-focused fieldset": {
-                  borderColor: "white",
+                  borderColor: "black",
                 },
               },
             }}
@@ -115,7 +115,7 @@ export const Contact = () => {
             sx={{
               display: "flex",
               border: 1,
-              height: "100vh",
+              height: "100%",
               width: "99.9vw",
               justifyContent: "center",
               position: "absolute",
@@ -130,15 +130,16 @@ export const Contact = () => {
         <TextField
           sx={{
             ml: 2,
-            width: "98vw",
+            
+            width: "98%",
             //this is the text color
             "& .MuiOutlinedInput-input": { color: "black" },
             "& .MuiFormLabel-root": { color: "black" },
             "& .MuiOutlinedInput-notchedOutline": { borderColor: "black" },
-            "& label.Mui-focused": { color: "white" },
+            "& label.Mui-focused": { color: "black" },
             "& .MuiOutlinedInput-root": {
               "&.Mui-focused fieldset": {
-                borderColor: "white",
+                borderColor: "black",
               },
             },
           }}

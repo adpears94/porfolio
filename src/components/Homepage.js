@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material/";
 import hotdog from "../images/hotdog.svg";
-
+import { zIndex } from '@mui/system';
 // const useStyles = makeStyles((theme) => ({
 //   root: {
 //     display: "flex",
@@ -39,19 +39,21 @@ export const Home = () => {
   return (
     <Box
       sx={{
+        
+        
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-around",
+        
         width: "100%",
-        height: "100vh",
+        // height: 1,
         alignItems: "center",
-        mt: -14.1,
+        // mt: -14.1,
       }}
     >
-      <Box sx={{ justifyContent: "flex-start" }}>
-        <img width={700} alt="Profile Picture" src={hotdog} />
+      <Box sx={{display: "flex", justifyContent: "center"}}>
+        <img width={"60%"} alt="Profile Picture" src={hotdog} />
       </Box>
-      <Box sx={{ justifyConent: "flex-end", ml: 3 }}>
+      <Box sx={{ display: 'flex', flexDirection: "column", width: "100%", justifyConent: "start", ml: 3 }}>
         <Typography variant="h4" gutterBottom>
           <a>Hi, I'm Avery.</a>
           <p>Im a Full Stack Software Developer</p>
