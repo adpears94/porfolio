@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { alpha } from "@mui/material";
-import { useNavigate } from "react-router";
+
 
 export const Footer = () => {
   // const [value, setValue] = React.useState('recents');
@@ -36,7 +36,7 @@ export const Footer = () => {
         sx={{
           width: "15%",
           position: "sticky",
-          backgroundColor: alpha("#fefefe", .8),
+          backgroundColor: alpha("#fefefe", 0.8),
         }}
 
         //  value={value}

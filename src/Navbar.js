@@ -24,7 +24,7 @@ export const Navbar = () => {
 
   return (
     
-    <TabContext  value={value}>
+    <TabContext style={{position: "sticky"}} value={value}>
       {/* <Box
         sx={{
           display: "flex",
@@ -40,6 +40,7 @@ export const Navbar = () => {
       > */}
         
         <TabList
+        style={{position: "sticky"}}
         centered={true}
           sx={{
             color: "#FAF9F6",
@@ -47,8 +48,9 @@ export const Navbar = () => {
             justifyContent: "center",
             width: "100vw",
             mt: -1.5,
-            ml: -1,
+            // ml: -1,
             backgroundColor: alpha("#000000", 0.2),
+            
 
             position: "sticky",
             "& .MuiButtonBase-root": { color: "white" },
@@ -74,6 +76,7 @@ export const Navbar = () => {
           aria-label="lab API tabs example"
         >
             <Tab
+            
               sx={{
                 color: "#FAF9F6",
                 //  ml: "38%"
@@ -102,11 +105,12 @@ export const Navbar = () => {
             />
         </TabList>
           
-      {/* </Box> */}
-      <TabPanel value="1"></TabPanel>
-      <TabPanel value="2"></TabPanel>
-      <TabPanel value="3"></TabPanel>
-      <TabPanel value="4"></TabPanel>
+      
+      <TabPanel sx={{p: 0}} value="1"></TabPanel>
+      <TabPanel sx={{p: 0}} value="2"></TabPanel>
+      <TabPanel sx={{p: 0}} value="3"></TabPanel>
+      <TabPanel sx={{p: 0}} value="4"></TabPanel>
+      
     </TabContext>
     
   );

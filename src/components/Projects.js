@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 import { Typography, Box, Button } from "@mui/material/";
-import hotdog from "../images/hotdog.svg";
-// import Carousel from 'react-gallery-carousel';
-// import 'react-gallery-carousel/dist/index.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import addtosched from "../images/pass/addtosched.PNG";
@@ -17,6 +14,7 @@ import login from "../images/vigil/login.PNG";
 import thirtyday from "../images/vigil/thirtyday.PNG";
 import users from "../images/vigil/users.PNG";
 import webmasters from "../images/vigil/webmasters.PNG";
+import { motion } from "framer-motion";
 
 export const Projects = () => {
   const [description, setDescription] = useState("vigil");
@@ -45,13 +43,18 @@ export const Projects = () => {
   const [newImages, setNewImages] = useState([]);
 
   const vigilDescription = (
+    
     <div>
-      <Typography variant="h1" gutterBottom>
-        VIGIL
-      </Typography>
-      <Typography variant="h4" gutterBottom>
-        Vehicle Inspection Gateway and Installation Logistics
-      </Typography>
+      <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <Typography variant="h1" gutterBottom>
+          VIGIL
+        </Typography>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <Typography variant="h4" gutterBottom>
+          Vehicle Inspection Gateway and Installation Logistics
+        </Typography>
+      </Box>
       <Typography variant="body1" paragraph>
         As a software developer, I am proud to have initiated, created, and
         implemented VIGIL - a powerful application designed to provide valuable
@@ -78,13 +81,17 @@ export const Projects = () => {
 
   const passDescription = (
     <div>
-      <Typography variant="h1" gutterBottom>
-        PASS
-      </Typography>
-      <Typography variant="h4" gutterBottom>
-        Personnell Assignment Scheduling System
-      </Typography>
-      <Typography variant="body1" paragraph>
+      <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <Typography variant="h1" gutterBottom>
+          PASS
+        </Typography>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <Typography variant="h4" gutterBottom>
+          Personnell Assignment Scheduling System
+        </Typography>
+      </Box>
+      <Typography variant="body1" sx={{ textAlign: "justify" }} paragraph>
         This scheduling application is designed to meet the unique needs of
         shift workers, specifically 32,000 military police members. The
         application is completely dynamic, allowing users to easily set time
@@ -119,17 +126,21 @@ export const Projects = () => {
     setNewImages(vigil);
   }, []);
 
-  const images = vigil.map((number, index) => ({
-    src: number,
-    index: index,
-  }));
+  
 
   return (
     <Box sx={{ width: "100%" }}>
+      <motion.div
+      className="container text-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: .5 }}
+    >
       <Box
         sx={{
           width: "100%",
-          height: "2vh",
+          // height: "2vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-end",
@@ -161,9 +172,9 @@ export const Projects = () => {
         sx={{
           display: "flex",
           // width: "99.5vw",
-          width: '100%',
+          width: "100%",
           flexDirection: "row",
-          flexWrap: 'wrap',
+          flexWrap: "wrap",
           justifyContent: "space-between",
           // alignItems: "center",
         }}
@@ -179,26 +190,25 @@ export const Projects = () => {
           }}
         >
           <Carousel
-          // width="50%"
-            // sx={{ width: "20vw" }}            
             showThumbs={false}
             showArrows={true}
             showIndicators={false}
             autoPlay={true}
             infiniteLoop={true}
-            onChange={(e) => console.log(e)}
-          >
+            
+            >
             {newImages.map((number, index) => (
-              <>
-                <img key={index} src={number.image} />
+              <span key={index}>
+                <img  src={number.image} alt={index} />
                 <Typography>{number.text}</Typography>
-              </>
+              </span>
             ))}
           </Carousel>
+        
         </Box>
         <Box
           sx={{
-            width: '50%',
+            width: "48%",
             minWidth: 412,
             maxWidth: "100%",
             display: "flex",
@@ -206,12 +216,13 @@ export const Projects = () => {
             // position: "relative",
             alignItems: "start",
             // mb: description === "vigil" ? 0 : 14,
-            // ml: 3,
+            ml: 1,
           }}
         >
           {description === "vigil" ? vigilDescription : passDescription}
         </Box>
       </Box>
+    </motion.div>
     </Box>
   );
 };
